@@ -1,0 +1,9 @@
+[project]
+name = "scope-test-generator"
+version = "0.1.0"
+dependencies = [
+    "daydream-scope",
+]
+
+[project.entry-points.scope]
+test-generator = "scope_test_generator"
