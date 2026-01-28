@@ -59,4 +59,4 @@ class TestGeneratorPipeline(Pipeline):
 
         self.frame_count += 1
 
-        return frame
+        return {"video": frame}
