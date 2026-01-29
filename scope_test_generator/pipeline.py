@@ -45,7 +45,7 @@ class TestGeneratorPipeline(Pipeline):
             torch.Tensor: Frame in THWC format (1, H, W, 3) in [0, 1] range
         """
         # Cycle through RGB colors based on frame count
-        t = torch.tensor(self.frame_count / 60.0)  # Smooth transition every 60 frames
+        t = torch.tensor(self.frame_count / 180.0)  # Slower cycle: ~180 frames per full phase
 
         r = (torch.sin(t) + 1) / 2
         g = (torch.sin(t + 2.0) + 1) / 2
